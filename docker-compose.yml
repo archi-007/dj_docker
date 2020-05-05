@@ -1,0 +1,16 @@
+version : '3'
+services:
+    python:
+        #image: python:3.6.9
+        build:
+            context: .
+            dockerfile: docker/python/Dockerfile
+
+        volumes:
+            - ./core:/core
+        ports:
+            - 8000:8000
+       # command: sleep infinity
+
+       # command: cd /core && pip install -r requirements.txt && python manage.py runserver
+        
